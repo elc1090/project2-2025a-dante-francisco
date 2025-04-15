@@ -9,6 +9,7 @@ Acesso:
 
 
 #### Desenvolvedor(a)
+Francisco Ribas - Sistemas de informação
 Dante Dardaque Santos - Sistemas de informação
 
 
