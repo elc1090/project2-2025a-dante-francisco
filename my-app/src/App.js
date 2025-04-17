@@ -1,10 +1,12 @@
 import './App.css';
+import Exercicios from './pages/Exercicios';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div>
-      oi
-    </div>
+    <>
+    <Exercicios></Exercicios>
+    </>
   );
 }
 
