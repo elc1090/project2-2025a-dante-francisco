@@ -1,14 +1,12 @@
 // EcommerceHomePage.jsx
 import React from 'react'
-import getExcList from "../components/requests/Exercicio_list.js"
+import ListaExercicios from '../components/Exercicio.js'
 
-//Teste da API wger
-const data = await getExcList();
 
 const Exercicios = () => {
   return (
     <div className="exercicios">
-        {data.results[0].equipment[0].name}
+      <ListaExercicios></ListaExercicios>
     </div>
   )
 }

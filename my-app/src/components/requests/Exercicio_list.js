@@ -13,14 +13,12 @@ async function getExcList() {
   
   function requestExcList() {
     // create a variable to hold the `Promise` returned from `fetch`
-    return Promise.resolve(
-      fetch(`https://wger.de/api/v2/exerciseinfo/`, {
+    return fetch(`https://wger.de/api/v2/exerciseinfo/`, {
         headers: {
           Accept: "application/json",
           Authorization: `Token ${token}`
         },
       })
-    );
   }
 
   export default getExcList;
