@@ -1,10 +1,12 @@
 // EcommerceHomePage.jsx
 import React from 'react'
+import ListaExercicios from '../components/Exercicio.js'
+
 
 const Exercicios = () => {
   return (
     <div className="exercicios">
-        exercicios
+      <ListaExercicios></ListaExercicios>
     </div>
   )
 }
