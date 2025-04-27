@@ -4,19 +4,19 @@ import getExcList from "./requests/Exercicio_list.js";
 import { getInfo, getImg } from "./DescEnglish";
 import imgPadrao from "../imgPadrao.png";
 
-const ListaExercicios = () => {
+const ListaExercicios = (filtro) => {
   const [listEx, setListEx] = useState([]);
   const { favoritos, toggleFavorito } = useContext(FavoritosContext); // <- aqui
 
   useEffect(() => {
     async function getData() {
-      const data = await getExcList();
+      const data = await getExcList(filtro);
       if (data) {
         setListEx(data.results);
       }
     }
     getData();
-  }, []);
+  }, [filtro]);
 
   return (
     <section className="container mx-auto mt-6">
@@ -43,6 +43,10 @@ const ListaExercicios = () => {
             </div>
           );
         })}
+      </div>
+      <div>
+        <h2>Filtros selecionados:</h2>
+        <div>{JSON.stringify(filtro)}</div>
       </div>
     </section>
   );
