@@ -1,8 +1,8 @@
 import token from "../../private/token.js"
 
-async function getExcList() {
+async function getExcList(filtro,ActivePage) {
   try {
-    const response = await requestExcList();
+    const response = await requestExcList(filtro,ActivePage);
     const data = await response.json(); // se for um fetch
     return data;
   } catch (error) {
@@ -10,10 +10,25 @@ async function getExcList() {
     return null;
   }
 }
+
+function objectToQueryParams(obj) {
+  const searchParams = new URLSearchParams();
+
+  for (const key in obj) {
+    if (obj[key].length > 0) {
+      obj[key].forEach((value) => {
+        searchParams.append(key, value);
+      });
+    }
+  }
+
+  return `?${searchParams.toString()}`;
+}
   
-  function requestExcList() {
-    // create a variable to hold the `Promise` returned from `fetch`
-    return fetch(`https://wger.de/api/v2/exerciseinfo/`, {
+  function requestExcList(filtros,ActivePage) {
+    const params = objectToQueryParams(filtros["filtro"]);
+    const pages = ActivePage*30;
+    return fetch(`https://wger.de/api/v2/exerciseinfo${params}&limit=30&offset=${pages}`, {
         headers: {
           Accept: "application/json",
           Authorization: `Token ${token}`
