@@ -2,11 +2,11 @@
 project2-2025a-dante-francisco created by GitHub Classroom
 
 
-# Projeto: nome
+# Projeto: GYM Strong
 
-foto
+![fundoo](https://github.com/user-attachments/assets/942669ee-6aba-485a-a239-d33920bcea30)
 
-Acesso: 
+Acesso: [link]
 
 
 #### Desenvolvedor(a)
@@ -17,10 +17,11 @@ Dante Dardaque Santos - Sistemas de informação
 
 ##### Descrição
 Conteúdo:
+O site permite que os usuários montem seus treinos personalizados, filtrando por máquinas, músculos para encontrar vários tipos de exercícios. Também oferece dicas e recomendações de treinos.
 
-Aparência:
+Aparência: Design clean e intuitivo, com uma interface de favoritar para a montagem do treino personalizado. As seções são bem organizadas, com áreas para filtrar os exercícios e visualizar dicas. Um design pouco chamativo com variações de branco e preto.
 
-Código: 
+Código: Utilização de React para as interfaces, API (https://wger.de/pt-br/software/features) para armazenar e recuperar treinos. Estilos responsivos e interativos com Tailwind CSS.
 
 
 #### Desenvolvimento
