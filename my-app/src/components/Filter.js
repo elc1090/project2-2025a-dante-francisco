@@ -48,7 +48,7 @@ const Filters = ({onFilter}) => {
 
     return (
       <div className="grid gap-4 grid-cols-1">
-        <div id="muscles" className="rounded-lg border p-5 group">
+        <div id="muscles" className="rounded-lg border p-2 shadow group">
           <h2 className="text-xl font-bold">Musculo</h2>
           {filterEx.muscles.map((valor) => {
             return(
@@ -59,7 +59,7 @@ const Filters = ({onFilter}) => {
             );
           })}
         </div>
-        <div id="category" className="border p-5 group">
+        <div id="category" className="rounded-lg border p-2 shadow group">
           <h2 className="text-xl font-bold">Categoria</h2>
           {filterEx.category.map((valor) => {
             return(
@@ -70,7 +70,7 @@ const Filters = ({onFilter}) => {
             );
           })}
         </div>
-        <div id="equipament" className="border p-5 group">
+        <div id="equipament" className="rounded-lg border p-2 shadow group">
           <h2 className="text-xl font-bold">Equipamento</h2>
           {filterEx.equipment.map((valor) => {
             return(

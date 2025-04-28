@@ -4,19 +4,20 @@ import getExcList from "./requests/Exercicio_list.js";
 import { getInfo, getImg } from "./DescEnglish";
 import imgPadrao from "../imgPadrao.png";
 
-const ListaExercicios = (filtro) => {
+const ListaExercicios = ({filtro,setPag,activePage}) => {
   const [listEx, setListEx] = useState([]);
   const { favoritos, toggleFavorito } = useContext(FavoritosContext); // <- aqui
 
   useEffect(() => {
     async function getData() {
-      const data = await getExcList(filtro);
+      const data = await getExcList(filtro,activePage);
       if (data) {
         setListEx(data.results);
+        setPag(Math.ceil(data.count/40))
       }
     }
     getData();
-  }, [filtro]);
+  }, [filtro,activePage]);
 
   return (
       <div className="col-span-3">
@@ -42,10 +43,6 @@ const ListaExercicios = (filtro) => {
             </div>
           );
         })}
-      </div>
-      <div>
-        <h2>Filtros selecionados:</h2>
-        <div>{JSON.stringify(filtro)}</div>
       </div>
     </div>
   );
