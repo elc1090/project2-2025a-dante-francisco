@@ -19,9 +19,8 @@ const ListaExercicios = (filtro) => {
   }, [filtro]);
 
   return (
-    <section className="container mx-auto mt-6">
-      <h2 className="text-2xl font-bold mb-4">Exercícios</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="col-span-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {listEx.map((val) => {
           const id = val.id;
           const isFavorito = favoritos.includes(id);
@@ -48,7 +47,7 @@ const ListaExercicios = (filtro) => {
         <h2>Filtros selecionados:</h2>
         <div>{JSON.stringify(filtro)}</div>
       </div>
-    </section>
+    </div>
   );
 };
 

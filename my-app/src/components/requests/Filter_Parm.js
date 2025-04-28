@@ -5,7 +5,7 @@ async function getFilterList() {
     const equipament = await requestList(requestEquipamentList);
     const category = await requestList(requestCategoryList);
     return {
-        muscle: muscle,
+        muscles: muscle,
         equipment: equipament,
         category: category
     };

@@ -4,13 +4,13 @@ import Swicht from "./Switch";
 
 const Filters = ({onFilter}) => {
     const [filterEx, setFilterEx] = useState({
-      muscle: [],
+      muscles: [],
       equipment: [],
       category: []
     });
     const [filterExCheck, setFilterExCheck] = useState({
       category: [],
-      muscle: [],
+      muscles: [],
       equipment: []
     });
 
@@ -47,20 +47,20 @@ const Filters = ({onFilter}) => {
     }
 
     return (
-      <div className="flex flex-row gap-4">
-        <div id="muscle" className="border p-5 row">
-          <h2>Musculo</h2>
-          {filterEx.muscle.map((valor) => {
+      <div className="grid gap-4 grid-cols-1">
+        <div id="muscles" className="rounded-lg border p-5 group">
+          <h2 className="text-xl font-bold">Musculo</h2>
+          {filterEx.muscles.map((valor) => {
             return(
               <div key={`mus-${valor.id}`} className="flex-row">
                 <h3>{valor.name_en ? valor.name_en : valor.name}</h3>
-                <Swicht val= {valor} SetListFilter= {HandleToggle} ListFilter = {filterExCheck} tipo={"muscle"}></Swicht>
+                <Swicht val= {valor} SetListFilter= {HandleToggle} ListFilter = {filterExCheck} tipo={"muscles"}></Swicht>
               </div>
             );
           })}
         </div>
-        <div id="category" className="border p-5 row">
-          <h2>Categoria</h2>
+        <div id="category" className="border p-5 group">
+          <h2 className="text-xl font-bold">Categoria</h2>
           {filterEx.category.map((valor) => {
             return(
               <div key={`cat-${valor.id}`} className="flex-row">
@@ -70,8 +70,8 @@ const Filters = ({onFilter}) => {
             );
           })}
         </div>
-        <div id="equipament" className="border p-5 row">
-          <h2>Equipamento</h2>
+        <div id="equipament" className="border p-5 group">
+          <h2 className="text-xl font-bold">Equipamento</h2>
           {filterEx.equipment.map((valor) => {
             return(
               <div key={`equip-${valor.id}`} className="flex-row">

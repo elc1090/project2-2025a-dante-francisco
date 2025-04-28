@@ -16,8 +16,9 @@ function objectToQueryParams(obj) {
 
   for (const key in obj) {
     if (obj[key].length > 0) {
-      searchParams.set(key, obj[key].join(","));
-      console.log(`${key}:${obj[key]}`)
+      obj[key].forEach((value) => {
+        searchParams.append(key, value);
+      });
     }
   }
 

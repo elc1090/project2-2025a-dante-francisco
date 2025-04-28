@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="bg-blue-600 text-white shadow-md">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-3">
-        <h1 className="text-2xl font-bold mb-2 md:mb-0">My App</h1>
+        <h1 className="text-4xl font-bold mb-2 md:mb-0">My App</h1>
         <nav>
           <ul className="flex flex-col md:flex-row gap-2 md:gap-6">
             <li>

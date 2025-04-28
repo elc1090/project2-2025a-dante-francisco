@@ -11,9 +11,12 @@ const Exercicios = () => {
   }
 
   return (
-    <div className="exercicios">
-      <ListaExercicios filtro={filter}></ListaExercicios>
-      <Filters onFilter={handleFilter}></Filters>
+    <div className="exercicios mx-10 ">
+      <h1 className="text-3xl font-bold mb-6">Exercícios</h1>
+      <section className="container mx-auto grid grid-cols-3 lg:grid-cols-4 gap-8">
+        <Filters onFilter={handleFilter}></Filters>
+        <ListaExercicios filtro={filter}></ListaExercicios>
+      </section>
     </div>
   )
 }
