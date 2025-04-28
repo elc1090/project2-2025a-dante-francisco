@@ -19,9 +19,8 @@ const ListaExercicios = ({filtro,setPag,activePage}) => {
     getData();
   }, [filtro,activePage]);
 
-  return (
-      {/* Lista de Exercícios */}
-      <div className="col-span-3">
+  return ( 
+    <div className="col-span-3">
       <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {listEx.map((val) => {
           const id = val.id;
@@ -43,7 +42,6 @@ const ListaExercicios = ({filtro,setPag,activePage}) => {
               </div>
             );
           })}
-        </div>
       </div>
     </div>
   );

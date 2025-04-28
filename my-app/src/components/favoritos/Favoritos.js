@@ -10,7 +10,7 @@ const Favoritos = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await getExcList();
+      const data = await getExcList(0,0);
       if (data) {
         setTodosExercicios(data.results);
       }
