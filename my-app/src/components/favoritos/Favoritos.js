@@ -1,8 +1,8 @@
 import { useState, useEffect, useContext } from "react";
-import { FavoritosContext } from "./FavoritosContext";
-import getExcList from "./requests/Exercicio_list.js";
-import { getInfo, getImg } from "./DescEnglish";
-import imgPadrao from "../imgPadrao.png";
+import { FavoritosContext } from "../FavoritosContext.js";
+import getExcList from "../requests/Exercicio_list.js";
+import { getInfo, getImg } from "../DescEnglish.js";
+import imgPadrao from "../../imgPadrao.png";
 
 const Favoritos = () => {
   const { favoritos, toggleFavorito } = useContext(FavoritosContext);
