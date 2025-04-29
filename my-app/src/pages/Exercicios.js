@@ -26,7 +26,7 @@ const Exercicios = () => {
   return (
     <div className="exercicios mx-10 ">
       <h1 className="text-3xl font-bold mb-6">Exercícios</h1>
-      <Suspense fallback={<div className='justify-center'><img src= {Gear} alt='Loading'/></div>}>
+      <Suspense fallback={<div className='flex items-center justify-center'><img src= {Gear} alt='Loading'/></div>}>
         <section className="container mx-auto grid grid-cols-3 lg:grid-cols-4 gap-8">
           <Filters onFilter={handleFilter}></Filters>
           <ListaExercicios filtro={filter} setPag={handlePage} activePage={activePag}></ListaExercicios>
