@@ -21,7 +21,7 @@ const ListaExercicios = ({filtro,setPag,activePage}) => {
 
   return ( 
     <div className="col-span-3">
-      <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {listEx.map((val) => {
           const id = val.id;
           const isFavorito = favoritos.includes(id);

@@ -1,9 +1,10 @@
 // EcommerceHomePage.jsx
-import React, { useState } from 'react'
-import ListaExercicios from '../components/Exercicio.js'
-import Filters from '../components/Filter.js'
+import React, { Suspense, useState } from 'react'
 import Pagination from '../components/Pagination.js'
+import Gear from '../Gear.gif' 
 
+const ListaExercicios = React.lazy(() => import('../components/Exercicio.js'));
+const Filters = React.lazy(() => import('../components/Filter.js'));
 
 const Exercicios = () => {
   const [filter,setFilters] = useState([]);
@@ -25,10 +26,12 @@ const Exercicios = () => {
   return (
     <div className="exercicios mx-10 ">
       <h1 className="text-3xl font-bold mb-6">Exercícios</h1>
-      <section className="container mx-auto grid grid-cols-3 lg:grid-cols-4 gap-8">
-        <Filters onFilter={handleFilter}></Filters>
-        <ListaExercicios filtro={filter} setPag={handlePage} activePage={activePag}></ListaExercicios>
-      </section>
+      <Suspense fallback={<div className='justify-center'><img src= {Gear} alt='Loading'/></div>}>
+        <section className="container mx-auto grid grid-cols-3 lg:grid-cols-4 gap-8">
+          <Filters onFilter={handleFilter}></Filters>
+          <ListaExercicios filtro={filter} setPag={handlePage} activePage={activePag}></ListaExercicios>
+        </section>
+      </Suspense>
       <Pagination totalPages={page} setActivePage={handleActivePage} activePage={activePag}></Pagination>
     </div>
   )
