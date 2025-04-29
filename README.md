@@ -6,7 +6,7 @@ project2-2025a-dante-francisco created by GitHub Classroom
 
 ![fundoo](https://github.com/user-attachments/assets/942669ee-6aba-485a-a239-d33920bcea30)
 
-Acesso: [link]
+Acesso1: https://gymstrongdf.netlify.app/
 
 
 #### Desenvolvedor(a)
