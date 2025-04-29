@@ -10,7 +10,7 @@ const Swicht = ({val, SetListFilter, ListFilter, tipo}) => {
     return (
         <label
         htmlFor={`toggle-${val.id}-${tipo}`}
-        className="flex items-center cursor-pointer select-none text-dark dark:text-white"
+        className="cursor-pointer select-none text-dark dark:text-white"
         >
         <div className="relative">
             <input

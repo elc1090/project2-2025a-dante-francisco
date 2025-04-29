@@ -26,7 +26,7 @@ function objectToQueryParams(obj) {
 }
   
   function requestExcList(filtros,ActivePage) {
-    const params = objectToQueryParams(filtros["filtro"]);
+    const params = objectToQueryParams(filtros);
     const pages = ActivePage*30;
     return fetch(`https://wger.de/api/v2/exerciseinfo${params}&limit=30&offset=${pages}`, {
         headers: {
